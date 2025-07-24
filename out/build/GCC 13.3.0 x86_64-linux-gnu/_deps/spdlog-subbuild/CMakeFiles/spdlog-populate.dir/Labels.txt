@@ -1,0 +1,14 @@
+# Target labels
+ spdlog-populate
+# Source files and their labels
+/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/CMakeFiles/spdlog-populate
+/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/CMakeFiles/spdlog-populate.rule
+/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/CMakeFiles/spdlog-populate-complete.rule
+/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-build.rule
+/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-configure.rule
+/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-download.rule
+/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-install.rule
+/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-mkdir.rule
+/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch.rule
+/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-test.rule
+/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update.rule
