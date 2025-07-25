@@ -85,6 +85,16 @@ package_source:
 package_source/fast: package_source
 .PHONY : package_source/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
@@ -107,7 +117,7 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\" \"gmock\" \"gtest\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -181,6 +191,44 @@ depend:
 	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+tests/CMakeFiles/tests.dir/rule:
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/tests.dir/rule
+.PHONY : tests/CMakeFiles/tests.dir/rule
+
+# Convenience name for target.
+tests: tests/CMakeFiles/tests.dir/rule
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/build
+.PHONY : tests/fast
+
+test_Config.o: test_Config.cpp.o
+.PHONY : test_Config.o
+
+# target to build an object file
+test_Config.cpp.o:
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/test_Config.cpp.o
+.PHONY : test_Config.cpp.o
+
+test_Config.i: test_Config.cpp.i
+.PHONY : test_Config.i
+
+# target to preprocess a source file
+test_Config.cpp.i:
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/test_Config.cpp.i
+.PHONY : test_Config.cpp.i
+
+test_Config.s: test_Config.cpp.s
+.PHONY : test_Config.s
+
+# target to generate assembly for a file
+test_Config.cpp.s:
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu" && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/test_Config.cpp.s
+.PHONY : test_Config.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -195,6 +243,11 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
+	@echo "... test"
+	@echo "... tests"
+	@echo "... test_Config.o"
+	@echo "... test_Config.i"
+	@echo "... test_Config.s"
 .PHONY : help
 
 

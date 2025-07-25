@@ -31,7 +31,7 @@ set(CPACK_IGNORE_FILES "/CVS/;/\\.svn/;/\\.bzr/;/\\.hg/;/\\.git/;\\.swp\$;\\.#;/
 set(CPACK_INNOSETUP_ARCHITECTURE "x64")
 set(CPACK_INSTALLED_DIRECTORIES "/home/se1d/PGW;/")
 set(CPACK_INSTALL_CMAKE_PROJECTS "")
-set(CPACK_INSTALL_PREFIX "/usr/local")
+set(CPACK_INSTALL_PREFIX "/home/se1d/PGW/out/install/GCC 13.3.0 x86_64-linux-gnu")
 set(CPACK_MODULE_PATH "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-src/cmake")
 set(CPACK_NSIS_DISPLAY_NAME "pgw 0.1")
 set(CPACK_NSIS_INSTALLER_ICON_CODE "")

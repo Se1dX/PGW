@@ -41,12 +41,12 @@ endif()
 
 execute_process(
   COMMAND "/usr/bin/git"
-          checkout "v3.11.3" --
+          checkout "v3.10.0" --
   WORKING_DIRECTORY "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/nlohmann_json-src"
   RESULT_VARIABLE error_code
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to checkout tag: 'v3.11.3'")
+  message(FATAL_ERROR "Failed to checkout tag: 'v3.10.0'")
 endif()
 
 set(init_submodules TRUE)

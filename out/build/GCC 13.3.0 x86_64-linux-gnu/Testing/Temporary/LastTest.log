@@ -1,0 +1,114 @@
+Start testing: Jul 25 23:22 MSK
+----------------------------------------------------------
+1/4 Testing: ConfigTest.LoadValidConfig
+1/4 Test: ConfigTest.LoadValidConfig
+Command: "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/tests/tests" "--gtest_filter=ConfigTest.LoadValidConfig" "--gtest_also_run_disabled_tests"
+Directory: /home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/tests
+"ConfigTest.LoadValidConfig" start time: Jul 25 23:22 MSK
+Output:
+----------------------------------------------------------
+Running main() from /home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = ConfigTest.LoadValidConfig
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ConfigTest
+[ RUN      ] ConfigTest.LoadValidConfig
+[       OK ] ConfigTest.LoadValidConfig (1 ms)
+[----------] 1 test from ConfigTest (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"ConfigTest.LoadValidConfig" end time: Jul 25 23:22 MSK
+"ConfigTest.LoadValidConfig" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/4 Testing: ConfigTest.MissingFile
+2/4 Test: ConfigTest.MissingFile
+Command: "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/tests/tests" "--gtest_filter=ConfigTest.MissingFile" "--gtest_also_run_disabled_tests"
+Directory: /home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/tests
+"ConfigTest.MissingFile" start time: Jul 25 23:22 MSK
+Output:
+----------------------------------------------------------
+Running main() from /home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = ConfigTest.MissingFile
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ConfigTest
+[ RUN      ] ConfigTest.MissingFile
+[       OK ] ConfigTest.MissingFile (0 ms)
+[----------] 1 test from ConfigTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ConfigTest.MissingFile" end time: Jul 25 23:22 MSK
+"ConfigTest.MissingFile" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: ConfigTest.InvalidJson
+3/4 Test: ConfigTest.InvalidJson
+Command: "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/tests/tests" "--gtest_filter=ConfigTest.InvalidJson" "--gtest_also_run_disabled_tests"
+Directory: /home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/tests
+"ConfigTest.InvalidJson" start time: Jul 25 23:22 MSK
+Output:
+----------------------------------------------------------
+Running main() from /home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = ConfigTest.InvalidJson
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ConfigTest
+[ RUN      ] ConfigTest.InvalidJson
+[       OK ] ConfigTest.InvalidJson (0 ms)
+[----------] 1 test from ConfigTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"ConfigTest.InvalidJson" end time: Jul 25 23:22 MSK
+"ConfigTest.InvalidJson" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: UnitTests
+4/4 Test: UnitTests
+Command: "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/tests/tests"
+Directory: /home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/tests
+"UnitTests" start time: Jul 25 23:22 MSK
+Output:
+----------------------------------------------------------
+Running main() from /home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from ConfigTest
+[ RUN      ] ConfigTest.LoadValidConfig
+[       OK ] ConfigTest.LoadValidConfig (0 ms)
+[ RUN      ] ConfigTest.MissingFile
+[       OK ] ConfigTest.MissingFile (0 ms)
+[ RUN      ] ConfigTest.InvalidJson
+[       OK ] ConfigTest.InvalidJson (0 ms)
+[----------] 3 tests from ConfigTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (4 ms total)
+[  PASSED  ] 3 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"UnitTests" end time: Jul 25 23:22 MSK
+"UnitTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jul 25 23:22 MSK

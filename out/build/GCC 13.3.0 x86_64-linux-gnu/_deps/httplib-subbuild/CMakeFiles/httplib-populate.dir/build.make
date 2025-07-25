@@ -71,8 +71,8 @@ CMakeFiles/httplib-populate: CMakeFiles/httplib-populate-complete
 CMakeFiles/httplib-populate-complete: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-install
 CMakeFiles/httplib-populate-complete: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-mkdir
 CMakeFiles/httplib-populate-complete: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-download
-CMakeFiles/httplib-populate-complete: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update
-CMakeFiles/httplib-populate-complete: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-patch
+CMakeFiles/httplib-populate-complete: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update_disconnected
+CMakeFiles/httplib-populate-complete: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-patch_disconnected
 CMakeFiles/httplib-populate-complete: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-configure
 CMakeFiles/httplib-populate-complete: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-build
 CMakeFiles/httplib-populate-complete: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-install
@@ -82,16 +82,13 @@ CMakeFiles/httplib-populate-complete: httplib-populate-prefix/src/httplib-popula
 	/usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-subbuild/CMakeFiles/httplib-populate-complete"
 	/usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-subbuild/httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-done"
 
-httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update:
-.PHONY : httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update
-
 httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-build: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-configure
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'httplib-populate'"
 	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-build" && /usr/bin/cmake -E echo_append
 	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-build" && /usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-subbuild/httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-build"
 
 httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-configure: httplib-populate-prefix/tmp/httplib-populate-cfgcmd.txt
-httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-configure: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-patch
+httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-configure: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-patch_disconnected
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'httplib-populate'"
 	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-build" && /usr/bin/cmake -E echo_append
 	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-build" && /usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-subbuild/httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-configure"
@@ -112,25 +109,23 @@ httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-mkdir:
 	/usr/bin/cmake -Dcfgdir= -P "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-subbuild/httplib-populate-prefix/tmp/httplib-populate-mkdirs.cmake"
 	/usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-subbuild/httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-mkdir"
 
-httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-patch: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-patch-info.txt
-httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-patch: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'httplib-populate'"
+httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-patch_disconnected: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-patch-info.txt
+httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-patch_disconnected: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update_disconnected
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "No patch_disconnected step for 'httplib-populate'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-subbuild/httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-patch"
-
-httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update:
-.PHONY : httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update
+	/usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-subbuild/httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-patch_disconnected"
 
 httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-test: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-install
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'httplib-populate'"
 	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-build" && /usr/bin/cmake -E echo_append
 	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-build" && /usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-subbuild/httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-test"
 
-httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update: httplib-populate-prefix/tmp/httplib-populate-gitupdate.cmake
-httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update-info.txt
-httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'httplib-populate'"
-	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-src" && /usr/bin/cmake -Dcan_fetch=YES -P "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-subbuild/httplib-populate-prefix/tmp/httplib-populate-gitupdate.cmake"
+httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update_disconnected: httplib-populate-prefix/tmp/httplib-populate-gitupdate.cmake
+httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update_disconnected: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update-info.txt
+httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update_disconnected: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-download
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Performing disconnected update step for 'httplib-populate'"
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-src" && /usr/bin/cmake -Dcan_fetch=NO -P "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-subbuild/httplib-populate-prefix/tmp/httplib-populate-gitupdate.cmake"
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-src" && /usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-subbuild/httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update_disconnected"
 
 httplib-populate: CMakeFiles/httplib-populate
 httplib-populate: CMakeFiles/httplib-populate-complete
@@ -139,9 +134,9 @@ httplib-populate: httplib-populate-prefix/src/httplib-populate-stamp/httplib-pop
 httplib-populate: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-download
 httplib-populate: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-install
 httplib-populate: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-mkdir
-httplib-populate: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-patch
+httplib-populate: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-patch_disconnected
 httplib-populate: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-test
-httplib-populate: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update
+httplib-populate: httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update_disconnected
 httplib-populate: CMakeFiles/httplib-populate.dir/build.make
 .PHONY : httplib-populate
 

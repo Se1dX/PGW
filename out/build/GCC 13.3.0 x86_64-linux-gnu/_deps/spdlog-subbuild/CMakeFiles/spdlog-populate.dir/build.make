@@ -71,8 +71,8 @@ CMakeFiles/spdlog-populate: CMakeFiles/spdlog-populate-complete
 CMakeFiles/spdlog-populate-complete: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-install
 CMakeFiles/spdlog-populate-complete: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-mkdir
 CMakeFiles/spdlog-populate-complete: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-download
-CMakeFiles/spdlog-populate-complete: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update
-CMakeFiles/spdlog-populate-complete: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch
+CMakeFiles/spdlog-populate-complete: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update_disconnected
+CMakeFiles/spdlog-populate-complete: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch_disconnected
 CMakeFiles/spdlog-populate-complete: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-configure
 CMakeFiles/spdlog-populate-complete: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-build
 CMakeFiles/spdlog-populate-complete: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-install
@@ -82,16 +82,13 @@ CMakeFiles/spdlog-populate-complete: spdlog-populate-prefix/src/spdlog-populate-
 	/usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/CMakeFiles/spdlog-populate-complete"
 	/usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-done"
 
-spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update:
-.PHONY : spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update
-
 spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-build: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-configure
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'spdlog-populate'"
 	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-build" && /usr/bin/cmake -E echo_append
 	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-build" && /usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-build"
 
 spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-configure: spdlog-populate-prefix/tmp/spdlog-populate-cfgcmd.txt
-spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-configure: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch
+spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-configure: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch_disconnected
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'spdlog-populate'"
 	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-build" && /usr/bin/cmake -E echo_append
 	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-build" && /usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-configure"
@@ -112,25 +109,23 @@ spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-mkdir:
 	/usr/bin/cmake -Dcfgdir= -P "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/tmp/spdlog-populate-mkdirs.cmake"
 	/usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-mkdir"
 
-spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch-info.txt
-spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'spdlog-populate'"
+spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch_disconnected: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch-info.txt
+spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch_disconnected: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update_disconnected
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "No patch_disconnected step for 'spdlog-populate'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch"
-
-spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update:
-.PHONY : spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update
+	/usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch_disconnected"
 
 spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-test: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-install
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'spdlog-populate'"
 	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-build" && /usr/bin/cmake -E echo_append
 	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-build" && /usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-test"
 
-spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update: spdlog-populate-prefix/tmp/spdlog-populate-gitupdate.cmake
-spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update-info.txt
-spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'spdlog-populate'"
-	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-src" && /usr/bin/cmake -Dcan_fetch=YES -P "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/tmp/spdlog-populate-gitupdate.cmake"
+spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update_disconnected: spdlog-populate-prefix/tmp/spdlog-populate-gitupdate.cmake
+spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update_disconnected: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update-info.txt
+spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update_disconnected: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-download
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Performing disconnected update step for 'spdlog-populate'"
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-src" && /usr/bin/cmake -Dcan_fetch=NO -P "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/tmp/spdlog-populate-gitupdate.cmake"
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-src" && /usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update_disconnected"
 
 spdlog-populate: CMakeFiles/spdlog-populate
 spdlog-populate: CMakeFiles/spdlog-populate-complete
@@ -139,9 +134,9 @@ spdlog-populate: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populat
 spdlog-populate: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-download
 spdlog-populate: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-install
 spdlog-populate: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-mkdir
-spdlog-populate: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch
+spdlog-populate: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch_disconnected
 spdlog-populate: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-test
-spdlog-populate: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update
+spdlog-populate: spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update_disconnected
 spdlog-populate: CMakeFiles/spdlog-populate.dir/build.make
 .PHONY : spdlog-populate
 

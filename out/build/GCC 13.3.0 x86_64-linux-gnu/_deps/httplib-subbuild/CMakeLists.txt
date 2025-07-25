@@ -27,7 +27,7 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 
 include(ExternalProject)
 ExternalProject_Add(httplib-populate
-                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/yhirose/cpp-httplib" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "v0.23.0"
+                     "UPDATE_DISCONNECTED" "True" "GIT_REPOSITORY" "https://github.com/yhirose/cpp-httplib" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "v0.23.0"
                     SOURCE_DIR          "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-src"
                     BINARY_DIR          "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/httplib-build"
                     CONFIGURE_COMMAND   ""

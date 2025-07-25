@@ -85,6 +85,16 @@ package_source:
 package_source/fast: package_source
 .PHONY : package_source/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
@@ -107,7 +117,7 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\" \"gmock\" \"gtest\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -181,6 +191,106 @@ depend:
 	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+server/CMakeFiles/pgw_common.dir/rule:
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/CMakeFiles/pgw_common.dir/rule
+.PHONY : server/CMakeFiles/pgw_common.dir/rule
+
+# Convenience name for target.
+pgw_common: server/CMakeFiles/pgw_common.dir/rule
+.PHONY : pgw_common
+
+# fast build rule for target.
+pgw_common/fast:
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu" && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/pgw_common.dir/build.make server/CMakeFiles/pgw_common.dir/build
+.PHONY : pgw_common/fast
+
+# Convenience name for target.
+server/CMakeFiles/pgw_server.dir/rule:
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/CMakeFiles/pgw_server.dir/rule
+.PHONY : server/CMakeFiles/pgw_server.dir/rule
+
+# Convenience name for target.
+pgw_server: server/CMakeFiles/pgw_server.dir/rule
+.PHONY : pgw_server
+
+# fast build rule for target.
+pgw_server/fast:
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu" && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/pgw_server.dir/build.make server/CMakeFiles/pgw_server.dir/build
+.PHONY : pgw_server/fast
+
+src/Config.o: src/Config.cpp.o
+.PHONY : src/Config.o
+
+# target to build an object file
+src/Config.cpp.o:
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu" && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/pgw_common.dir/build.make server/CMakeFiles/pgw_common.dir/src/Config.cpp.o
+.PHONY : src/Config.cpp.o
+
+src/Config.i: src/Config.cpp.i
+.PHONY : src/Config.i
+
+# target to preprocess a source file
+src/Config.cpp.i:
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu" && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/pgw_common.dir/build.make server/CMakeFiles/pgw_common.dir/src/Config.cpp.i
+.PHONY : src/Config.cpp.i
+
+src/Config.s: src/Config.cpp.s
+.PHONY : src/Config.s
+
+# target to generate assembly for a file
+src/Config.cpp.s:
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu" && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/pgw_common.dir/build.make server/CMakeFiles/pgw_common.dir/src/Config.cpp.s
+.PHONY : src/Config.cpp.s
+
+src/Logger.o: src/Logger.cpp.o
+.PHONY : src/Logger.o
+
+# target to build an object file
+src/Logger.cpp.o:
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu" && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/pgw_common.dir/build.make server/CMakeFiles/pgw_common.dir/src/Logger.cpp.o
+.PHONY : src/Logger.cpp.o
+
+src/Logger.i: src/Logger.cpp.i
+.PHONY : src/Logger.i
+
+# target to preprocess a source file
+src/Logger.cpp.i:
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu" && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/pgw_common.dir/build.make server/CMakeFiles/pgw_common.dir/src/Logger.cpp.i
+.PHONY : src/Logger.cpp.i
+
+src/Logger.s: src/Logger.cpp.s
+.PHONY : src/Logger.s
+
+# target to generate assembly for a file
+src/Logger.cpp.s:
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu" && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/pgw_common.dir/build.make server/CMakeFiles/pgw_common.dir/src/Logger.cpp.s
+.PHONY : src/Logger.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu" && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/pgw_server.dir/build.make server/CMakeFiles/pgw_server.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu" && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/pgw_server.dir/build.make server/CMakeFiles/pgw_server.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu" && $(MAKE) $(MAKESILENT) -f server/CMakeFiles/pgw_server.dir/build.make server/CMakeFiles/pgw_server.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -195,6 +305,18 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
+	@echo "... test"
+	@echo "... pgw_common"
+	@echo "... pgw_server"
+	@echo "... src/Config.o"
+	@echo "... src/Config.i"
+	@echo "... src/Config.s"
+	@echo "... src/Logger.o"
+	@echo "... src/Logger.i"
+	@echo "... src/Logger.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

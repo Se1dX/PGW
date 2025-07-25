@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpgw_common.a CMakeFiles/pgw_common.dir/src/Config.cpp.o CMakeFiles/pgw_common.dir/src/Logger.cpp.o
+/usr/bin/ranlib libpgw_common.a

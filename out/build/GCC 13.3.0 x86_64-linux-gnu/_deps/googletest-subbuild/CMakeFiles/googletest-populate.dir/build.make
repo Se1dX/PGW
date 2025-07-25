@@ -71,8 +71,8 @@ CMakeFiles/googletest-populate: CMakeFiles/googletest-populate-complete
 CMakeFiles/googletest-populate-complete: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install
 CMakeFiles/googletest-populate-complete: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir
 CMakeFiles/googletest-populate-complete: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download
-CMakeFiles/googletest-populate-complete: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update
-CMakeFiles/googletest-populate-complete: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch
+CMakeFiles/googletest-populate-complete: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update_disconnected
+CMakeFiles/googletest-populate-complete: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch_disconnected
 CMakeFiles/googletest-populate-complete: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure
 CMakeFiles/googletest-populate-complete: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build
 CMakeFiles/googletest-populate-complete: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install
@@ -82,16 +82,13 @@ CMakeFiles/googletest-populate-complete: googletest-populate-prefix/src/googlete
 	/usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete"
 	/usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done"
 
-googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update:
-.PHONY : googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update
-
 googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'googletest-populate'"
 	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-build" && /usr/bin/cmake -E echo_append
 	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-build" && /usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build"
 
 googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure: googletest-populate-prefix/tmp/googletest-populate-cfgcmd.txt
-googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch
+googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch_disconnected
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'googletest-populate'"
 	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-build" && /usr/bin/cmake -E echo_append
 	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-build" && /usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure"
@@ -112,25 +109,23 @@ googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkd
 	/usr/bin/cmake -Dcfgdir= -P "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-mkdirs.cmake"
 	/usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir"
 
-googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch-info.txt
-googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'googletest-populate'"
+googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch_disconnected: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch-info.txt
+googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch_disconnected: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update_disconnected
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "No patch_disconnected step for 'googletest-populate'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch"
-
-googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update:
-.PHONY : googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update
+	/usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch_disconnected"
 
 googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'googletest-populate'"
 	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-build" && /usr/bin/cmake -E echo_append
 	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-build" && /usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test"
 
-googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update: googletest-populate-prefix/tmp/googletest-populate-gitupdate.cmake
-googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update-info.txt
-googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'googletest-populate'"
-	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-src" && /usr/bin/cmake -Dcan_fetch=YES -P "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-gitupdate.cmake"
+googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update_disconnected: googletest-populate-prefix/tmp/googletest-populate-gitupdate.cmake
+googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update_disconnected: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update-info.txt
+googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update_disconnected: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Performing disconnected update step for 'googletest-populate'"
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-src" && /usr/bin/cmake -Dcan_fetch=NO -P "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-gitupdate.cmake"
+	cd "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-src" && /usr/bin/cmake -E touch "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update_disconnected"
 
 googletest-populate: CMakeFiles/googletest-populate
 googletest-populate: CMakeFiles/googletest-populate-complete
@@ -139,9 +134,9 @@ googletest-populate: googletest-populate-prefix/src/googletest-populate-stamp/go
 googletest-populate: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download
 googletest-populate: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install
 googletest-populate: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir
-googletest-populate: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch
+googletest-populate: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch_disconnected
 googletest-populate: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test
-googletest-populate: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update
+googletest-populate: googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update_disconnected
 googletest-populate: CMakeFiles/googletest-populate.dir/build.make
 .PHONY : googletest-populate
 

@@ -6,9 +6,9 @@ file(REMOVE_RECURSE
   "spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-download"
   "spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-install"
   "spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-mkdir"
-  "spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch"
+  "spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch_disconnected"
   "spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-test"
-  "spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update"
+  "spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update_disconnected"
 )
 
 # Per-language clean rules from dependency scanning.

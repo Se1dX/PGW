@@ -26,13 +26,13 @@
 			"file" : "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir.rule"
 		},
 		{
-			"file" : "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch.rule"
+			"file" : "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch_disconnected.rule"
 		},
 		{
 			"file" : "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test.rule"
 		},
 		{
-			"file" : "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update.rule"
+			"file" : "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update_disconnected.rule"
 		}
 	],
 	"target" : 

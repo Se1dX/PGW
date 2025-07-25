@@ -41,12 +41,12 @@ endif()
 
 execute_process(
   COMMAND "/usr/bin/git"
-          checkout "v1.16.0" --
+          checkout "release-1.12.1" --
   WORKING_DIRECTORY "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/googletest-src"
   RESULT_VARIABLE error_code
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to checkout tag: 'v1.16.0'")
+  message(FATAL_ERROR "Failed to checkout tag: 'release-1.12.1'")
 endif()
 
 set(init_submodules TRUE)

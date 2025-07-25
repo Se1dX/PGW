@@ -85,6 +85,16 @@ package_source:
 package_source/fast: package_source
 .PHONY : package_source/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
@@ -107,7 +117,7 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\" \"gmock\" \"gtest\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -182,6 +192,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named run_server
+
+# Build rule for target.
+run_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_server
+.PHONY : run_server
+
+# fast build rule for target.
+run_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_server.dir/build.make CMakeFiles/run_server.dir/build
+.PHONY : run_server/fast
+
+#=============================================================================
+# Target rules for targets named run_client
+
+# Build rule for target.
+run_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_client
+.PHONY : run_client
+
+# fast build rule for target.
+run_client/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_client.dir/build.make CMakeFiles/run_client.dir/build
+.PHONY : run_client/fast
+
+#=============================================================================
 # Target rules for targets named spdlog
 
 # Build rule for target.
@@ -193,32 +229,6 @@ spdlog: cmake_check_build_system
 spdlog/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/spdlog-build/CMakeFiles/spdlog.dir/build.make _deps/spdlog-build/CMakeFiles/spdlog.dir/build
 .PHONY : spdlog/fast
-
-#=============================================================================
-# Target rules for targets named gmock
-
-# Build rule for target.
-gmock: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
-.PHONY : gmock
-
-# fast build rule for target.
-gmock/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-.PHONY : gmock/fast
-
-#=============================================================================
-# Target rules for targets named gmock_main
-
-# Build rule for target.
-gmock_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
-.PHONY : gmock_main
-
-# fast build rule for target.
-gmock_main/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-.PHONY : gmock_main/fast
 
 #=============================================================================
 # Target rules for targets named gtest
@@ -246,6 +256,45 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+#=============================================================================
+# Target rules for targets named pgw_common
+
+# Build rule for target.
+pgw_common: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pgw_common
+.PHONY : pgw_common
+
+# fast build rule for target.
+pgw_common/fast:
+	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/pgw_common.dir/build.make server/CMakeFiles/pgw_common.dir/build
+.PHONY : pgw_common/fast
+
+#=============================================================================
+# Target rules for targets named pgw_server
+
+# Build rule for target.
+pgw_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pgw_server
+.PHONY : pgw_server
+
+# fast build rule for target.
+pgw_server/fast:
+	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/pgw_server.dir/build.make server/CMakeFiles/pgw_server.dir/build
+.PHONY : pgw_server/fast
+
+#=============================================================================
+# Target rules for targets named tests
+
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/build
+.PHONY : tests/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -260,11 +309,15 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
-	@echo "... gmock"
-	@echo "... gmock_main"
+	@echo "... test"
+	@echo "... run_client"
+	@echo "... run_server"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... pgw_common"
+	@echo "... pgw_server"
 	@echo "... spdlog"
+	@echo "... tests"
 .PHONY : help
 
 

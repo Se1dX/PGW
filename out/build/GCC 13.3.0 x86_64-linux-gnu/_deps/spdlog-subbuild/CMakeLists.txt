@@ -27,7 +27,7 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 
 include(ExternalProject)
 ExternalProject_Add(spdlog-populate
-                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/gabime/spdlog" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "v1.15.0"
+                     "UPDATE_DISCONNECTED" "True" "GIT_REPOSITORY" "https://github.com/gabime/spdlog" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "v1.15.0"
                     SOURCE_DIR          "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-src"
                     BINARY_DIR          "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-build"
                     CONFIGURE_COMMAND   ""

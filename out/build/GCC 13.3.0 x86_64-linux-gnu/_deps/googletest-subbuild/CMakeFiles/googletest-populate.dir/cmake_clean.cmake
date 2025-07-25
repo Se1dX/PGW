@@ -6,9 +6,9 @@ file(REMOVE_RECURSE
   "googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download"
   "googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install"
   "googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir"
-  "googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch"
+  "googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch_disconnected"
   "googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test"
-  "googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update"
+  "googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update_disconnected"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -26,13 +26,13 @@
 			"file" : "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-mkdir.rule"
 		},
 		{
-			"file" : "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch.rule"
+			"file" : "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-patch_disconnected.rule"
 		},
 		{
 			"file" : "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-test.rule"
 		},
 		{
-			"file" : "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update.rule"
+			"file" : "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/spdlog-subbuild/spdlog-populate-prefix/src/spdlog-populate-stamp/spdlog-populate-update_disconnected.rule"
 		}
 	],
 	"target" : 

@@ -6,6 +6,6 @@ be9d68f6052bd197aa7f89286108f5ef googletest-populate-prefix/src/googletest-popul
 b883cbc41eb7f19ac8c41736d42886ba googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download
 c7c01ffc1521ff26578ecef50bbd60ad googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install
 5440bb7910ed4ed550e961d4f3af3abb googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir
-4b82d0e0de4a3686e95a86e2a4b11c01 googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch
+0da56b02ea7b0374963bdc492069f680 googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch_disconnected
 eed31274aeb7ede608e5d96ffe2f2937 googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test
-15444a4d161ba64cdf109623aede179a googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update
+55c450cb7c942e03f4a73269796dd0a8 googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update_disconnected

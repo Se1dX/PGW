@@ -6,9 +6,9 @@ file(REMOVE_RECURSE
   "httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-download"
   "httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-install"
   "httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-mkdir"
-  "httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-patch"
+  "httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-patch_disconnected"
   "httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-test"
-  "httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update"
+  "httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update_disconnected"
 )
 
 # Per-language clean rules from dependency scanning.

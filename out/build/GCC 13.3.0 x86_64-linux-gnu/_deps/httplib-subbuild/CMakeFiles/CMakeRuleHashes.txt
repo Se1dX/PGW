@@ -6,6 +6,6 @@ ad4bfdeee8bb489a8dc93b6814531f93 httplib-populate-prefix/src/httplib-populate-st
 d02732a67ed041be04ef35ed7a7dbdc6 httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-download
 c6dcd35857ca961d5fd61c80592f8e9e httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-install
 f50063bb87f36e6776e1d1d4763edc13 httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-mkdir
-de5b428bf9a43f56d3b63c41fce45a0f httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-patch
+e4db7fda6f297f4e052db804ac44281f httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-patch_disconnected
 be9c86c5625223a9f0e44b386695c3d8 httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-test
-3122c0c7b4902fab069cdfa952e74c0b httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update
+b218eb4dcf3c802994ff582ca7242675 httplib-populate-prefix/src/httplib-populate-stamp/httplib-populate-update_disconnected
