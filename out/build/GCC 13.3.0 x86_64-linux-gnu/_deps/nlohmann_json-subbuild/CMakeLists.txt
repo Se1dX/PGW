@@ -27,7 +27,7 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 
 include(ExternalProject)
 ExternalProject_Add(nlohmann_json-populate
-                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/nlohmann/json" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "v3.11.2"
+                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/nlohmann/json" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "v3.11.3"
                     SOURCE_DIR          "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/nlohmann_json-src"
                     BINARY_DIR          "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/_deps/nlohmann_json-build"
                     CONFIGURE_COMMAND   ""
