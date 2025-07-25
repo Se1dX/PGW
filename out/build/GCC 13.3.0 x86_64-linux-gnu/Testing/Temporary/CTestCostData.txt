@@ -1,5 +1,0 @@
-ConfigTest.LoadValidConfig 2 0.00335303
-ConfigTest.MissingFile 2 0.00232707
-ConfigTest.InvalidJson 1 0.0052922
-UnitTests 1 0.0105901
----

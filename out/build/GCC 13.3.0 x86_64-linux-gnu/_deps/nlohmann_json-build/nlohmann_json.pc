@@ -1,4 +1,0 @@
-Name: nlohmann_json
-Description: JSON for Modern C++
-Version: 3.10.0
-Cflags: -I/home/se1d/PGW/out/install/GCC 13.3.0 x86_64-linux-gnu/include

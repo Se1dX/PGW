@@ -1,7 +1,0 @@
-add_test([=[ConfigTest.LoadValidConfig]=]  [==[/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/tests/tests]==] [==[--gtest_filter=ConfigTest.LoadValidConfig]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[ConfigTest.LoadValidConfig]=]  PROPERTIES WORKING_DIRECTORY [==[/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/tests]==] SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test([=[ConfigTest.MissingFile]=]  [==[/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/tests/tests]==] [==[--gtest_filter=ConfigTest.MissingFile]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[ConfigTest.MissingFile]=]  PROPERTIES WORKING_DIRECTORY [==[/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/tests]==] SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test([=[ConfigTest.InvalidJson]=]  [==[/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/tests/tests]==] [==[--gtest_filter=ConfigTest.InvalidJson]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[ConfigTest.InvalidJson]=]  PROPERTIES WORKING_DIRECTORY [==[/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/tests]==] SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set(  tests_TESTS ConfigTest.LoadValidConfig ConfigTest.MissingFile ConfigTest.InvalidJson)

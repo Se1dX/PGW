@@ -1,5 +1,0 @@
-if(EXISTS "/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/tests/tests[1]_tests.cmake")
-  include("/home/se1d/PGW/out/build/GCC 13.3.0 x86_64-linux-gnu/tests/tests[1]_tests.cmake")
-else()
-  add_test(tests_NOT_BUILT tests_NOT_BUILT)
-endif()

@@ -1,3 +1,6 @@
+### Project Directories ###
+out/  
+
 ### C++ ###
 # Prerequisites
 *.d
@@ -50,3 +53,15 @@
 # Ignore all local history of files
 .history
 .ionide
+
+### Temporary Files ###
+*.log  
+*.tmp  
+*.swp  
+*~    
+
+### Build Directories ###
+build/  # Альтернативная папка сборки
+CMakeCache.txt
+CMakeFiles/
+Makefile

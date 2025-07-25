@@ -1,1 +1,0 @@
-/usr/bin/g++ -g CMakeFiles/pgw_server.dir/src/main.cpp.o -o pgw_server  libpgw_common.a ../_deps/spdlog-build/libspdlogd.a 
