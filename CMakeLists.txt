@@ -2,17 +2,16 @@ cmake_minimum_required(VERSION 3.16)
 project(pgw VERSION 0.1 LANGUAGES CXX)
 enable_testing()
 
-# Ускорение повторных конфигураций - используем кэшированные зависимости
+# ускорение повторных конфигураций - используем кэшированные зависимости
 set(FETCHCONTENT_UPDATES_DISCONNECTED ON CACHE BOOL "Skip update checks for dependencies")
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# Автоматическая загрузка зависимостей
 include(FetchContent)
 
-# Настройка базового каталога для зависимостей
+# настройка базового каталога для зависимостей
 set(FETCHCONTENT_BASE_DIR "${CMAKE_BINARY_DIR}/_deps")
 
 # nlohmann::json
@@ -37,7 +36,7 @@ FetchContent_Declare(
   GIT_REPOSITORY https://github.com/gabime/spdlog
   GIT_TAG v1.15.0
 )
-# Отключаем ненужные компоненты spdlog
+# отключаем ненужные компоненты spdlog
 set(SPDLOG_BUILD_EXAMPLE OFF CACHE BOOL "" FORCE)
 set(SPDLOG_BUILD_TESTS OFF CACHE BOOL "" FORCE)
 set(SPDLOG_BUILD_BENCH OFF CACHE BOOL "" FORCE)
@@ -49,17 +48,16 @@ FetchContent_Declare(
   GIT_REPOSITORY https://github.com/google/googletest
   GIT_TAG release-1.12.1
 )
-# Отключаем ненужные компоненты googletest
+# отключаем ненужные компоненты googletest
 set(BUILD_GMOCK OFF CACHE BOOL "" FORCE)
 set(INSTALL_GTEST OFF CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-# Включаем поддиректории
 add_subdirectory(server)
 add_subdirectory(client)
 add_subdirectory(tests)
 
-# Цели для удобного запуска
+# цели для удобного запуска
 add_custom_target(run_server
   COMMAND pgw_server ${CMAKE_SOURCE_DIR}/config/server_config.json
   WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
@@ -74,7 +72,7 @@ add_custom_target(run_client
   COMMENT "Running PGW client"
 )
 
-# Оптимизация: предварительная загрузка зависимостей
+# оптимизация: предварительная загрузка зависимостей
 if(NOT FETCHCONTENT_SOURCE_DIR_NLOHMANN_JSON)
   FetchContent_GetProperties(nlohmann_json)
   if(NOT nlohmann_json_POPULATED)

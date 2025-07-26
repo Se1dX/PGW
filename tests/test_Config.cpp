@@ -7,10 +7,10 @@
 namespace fs = std::filesystem;
 
 TEST(ConfigTest, LoadValidConfig) {
-    // Создаем временный конфиг
+    // создаем временный конфиг
     const auto temp_path = fs::temp_directory_path() / "test_config.json";
     {
-        // Явно преобразуем путь в строку
+        // явно преобразуем путь в строку
         std::ofstream file(temp_path.string());
         file << R"({
             "udp_ip": "0.0.0.0",
@@ -26,7 +26,7 @@ TEST(ConfigTest, LoadValidConfig) {
         })";
     }
     
-    // Преобразуем путь в строку
+    // преобразуем путь в строку
     const auto config = pgw::load_server_config(temp_path.string());
     
     EXPECT_EQ(config.udp_ip, "0.0.0.0");
@@ -41,7 +41,7 @@ TEST(ConfigTest, LoadValidConfig) {
     EXPECT_EQ(config.blacklist[0], "001010123456789");
     EXPECT_EQ(config.max_sessions, 10000);
     
-    // Удаляем временный файл
+    // удаляем временный файл
     fs::remove(temp_path);
 }
 
@@ -53,17 +53,17 @@ TEST(ConfigTest, MissingFile) {
 }
 
 TEST(ConfigTest, InvalidJson) {
-    // Создаем временный конфиг с ошибкой
+    // создаем временный конфиг с ошибкой
     const auto temp_path = fs::temp_directory_path() / "invalid_config.json";
     {
         std::ofstream file(temp_path.string());
-        file << R"({ "udp_port": "invalid_value" })"; // Неправильный тип
+        file << R"({ "udp_port": "invalid_value" })"; // неправильный тип
     }
     
-    // Ожидаем исключение от nlohmann::json
+    // ожидаем исключение от nlohmann::json
     EXPECT_THROW({
         pgw::load_server_config(temp_path.string());
-    }, nlohmann::json::exception); // Изменено на nlohmann::json::exception
+    }, nlohmann::json::exception); 
     
     fs::remove(temp_path);
 }

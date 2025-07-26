@@ -1,7 +1,8 @@
-# Создаем библиотеку общих компонентов
+
 add_library(pgw_common STATIC
   src/Config.cpp
   src/Logger.cpp
+  src/SessionManager.cpp
 )
 
 target_include_directories(pgw_common PUBLIC
@@ -13,6 +14,6 @@ target_link_libraries(pgw_common PUBLIC
   spdlog::spdlog
 )
 
-# Сервер использует библиотеку
+
 add_executable(pgw_server src/main.cpp)
 target_link_libraries(pgw_server PRIVATE pgw_common)

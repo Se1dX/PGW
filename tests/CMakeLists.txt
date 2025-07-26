@@ -1,6 +1,7 @@
-# tests/CMakeLists.txt
+
 add_executable(tests
     test_Config.cpp
+    test_SessionManager.cpp 
 )
 
 target_include_directories(tests PRIVATE
@@ -12,12 +13,7 @@ target_link_libraries(tests PRIVATE
     gtest_main
 )
 
-# Включаем поддержку тестирования
 enable_testing()
 
-# Явно добавляем тест
-add_test(NAME UnitTests COMMAND tests)
-
-# Опционально: автоматическое обнаружение тестов GoogleTest
 include(GoogleTest)
 gtest_discover_tests(tests)

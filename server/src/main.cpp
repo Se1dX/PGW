@@ -3,7 +3,7 @@
 #include <spdlog/spdlog.h>
 #include <iostream>
 
-using namespace pgw;  // Добавьте эту строку
+using namespace pgw;
 
 int main(int argc, char* argv[]) {
     if (argc < 2) {
@@ -12,13 +12,13 @@ int main(int argc, char* argv[]) {
     }
 
     try {
-        // Загрузка конфигурации
-        auto config = load_server_config(argv[1]);  // Убрали pgw::
+        // загрузка конфигурации
+        auto config = load_server_config(argv[1]);
         
-        // Инициализация логгера
+        // инициализация логгера
         Logger::init(config.log_file, config.log_level);
         
-        // Логирование успешной загрузки
+        // логирование успешной загрузки
         spdlog::info("Server configuration loaded successfully");
         spdlog::debug("UDP port: {}", config.udp_port);
         spdlog::debug("Max sessions: {}", config.max_sessions);

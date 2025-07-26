@@ -20,7 +20,7 @@ struct ServerConfig {
     unsigned max_sessions;
 };
 
-// Объявление функции
+// объявление функции
 ServerConfig load_server_config(const std::string& file_path);
 
 } // namespace pgw
