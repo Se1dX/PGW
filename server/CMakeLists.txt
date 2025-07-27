@@ -3,6 +3,8 @@ add_library(pgw_common STATIC
   src/Config.cpp
   src/Logger.cpp
   src/SessionManager.cpp
+  src/CDRLogger.cpp
+  src/UdpServer.cpp
 )
 
 target_include_directories(pgw_common PUBLIC

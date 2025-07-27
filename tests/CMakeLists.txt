@@ -2,6 +2,7 @@
 add_executable(tests
     test_Config.cpp
     test_SessionManager.cpp 
+    test_UdpServer.cpp
 )
 
 target_include_directories(tests PRIVATE
