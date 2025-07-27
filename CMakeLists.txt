@@ -66,7 +66,7 @@ add_custom_target(run_server
 )
 
 add_custom_target(run_client
-  COMMAND pgw_client ${CMAKE_SOURCE_DIR}/config/client_config.json 001010123456789
+  COMMAND pgw_client ${CMAKE_SOURCE_DIR}/config/client_config.json 001010123456780
   WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
   DEPENDS pgw_client
   COMMENT "Running PGW client"
