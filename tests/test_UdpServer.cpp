@@ -56,6 +56,13 @@ protected:
         if (sock < 0) {
             throw std::runtime_error("ошибка создания сокета: " + std::string(strerror(errno)));
         }
+        
+        // Устанавливаем таймаут 500ms
+        struct timeval tv;
+        tv.tv_sec = 0;
+        tv.tv_usec = 500000;
+        setsockopt(sock, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
+        
         return sock;
     }
     
@@ -94,14 +101,8 @@ TEST_F(UdpServerTest, BasicRequest) {
         FAIL() << "ошибка sendto: " << strerror(errno);
     }
     
-    // настраиваем таймаут приема
-    struct timeval tv;
-    tv.tv_sec = 1;
-    tv.tv_usec = 0;
-    setsockopt(client_sock, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
-    
     // принимаем ответ
-    char buffer[128] = {0};
+    char buffer[16] = {0};
     sockaddr_in from_addr;
     socklen_t from_len = sizeof(from_addr);
     ssize_t received = recvfrom(client_sock, buffer, sizeof(buffer), 0,
@@ -138,14 +139,8 @@ TEST_F(UdpServerTest, BlacklistedRequest) {
         FAIL() << "ошибка sendto: " << strerror(errno);
     }
     
-    // настраиваем таймаут
-    struct timeval tv;
-    tv.tv_sec = 1;
-    tv.tv_usec = 0;
-    setsockopt(client_sock, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
-    
     // прием ответа
-    char buffer[128] = {0};
+    char buffer[16] = {0};
     sockaddr_in from_addr;
     socklen_t from_len = sizeof(from_addr);
     ssize_t received = recvfrom(client_sock, buffer, sizeof(buffer), 0,

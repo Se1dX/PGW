@@ -7,6 +7,7 @@
 #include <string>
 #include <memory>
 #include <spdlog/spdlog.h>
+#include <CDRLogger.hpp>
 
 namespace pgw {
 
@@ -28,13 +29,15 @@ public:
     void remove_session(const std::string& imsi);
     void remove_expired_sessions();
     unsigned active_sessions() const;
-    void graceful_shutdown(unsigned rate);
+    void graceful_shutdown(unsigned rate, CDRLogger& cdr_logger);
 
 private:
     struct Session {
         std::chrono::steady_clock::time_point created_at;
     };
 
+    void graceful_remove(const std::string& imsi, CDRLogger& cdr_logger);
+    
     mutable std::mutex mutex_;
     std::unordered_map<std::string, Session> sessions_;
     const std::set<std::string>& blacklist_;

@@ -42,7 +42,6 @@ UdpServer::UdpServer(const std::string& ip, uint16_t port,
                  inet_ntoa(addr_.sin_addr), ntohs(addr_.sin_port));
 }
 
-// метод для получения порта
 uint16_t UdpServer::port() const {
     return ntohs(addr_.sin_port);
 }
@@ -57,15 +56,15 @@ void UdpServer::handle_request(const std::string& imsi, const sockaddr_in& clien
     // формируем ответ клиенту и действие для лога
     switch(result) {
         case SessionManager::CreateResult::CREATED:
-            response = "created\n";
+            response = "created";
             action = "created";
             break;
         case SessionManager::CreateResult::ALREADY_EXISTS:
-            response = "created\n";  // клиенту все равно "created"
+            response = "created";
             action = "exists";
             break;
         default:
-            response = "rejected\n";
+            response = "rejected";
             action = "rejected";
     }
     
@@ -73,10 +72,14 @@ void UdpServer::handle_request(const std::string& imsi, const sockaddr_in& clien
     cdr_logger_.log(imsi, action);
     
     // отправляем ответ клиенту
-    sendto(sockfd_, response.data(), response.size(), 0,
-          (struct sockaddr*)&client_addr, sizeof(client_addr));
+    ssize_t sent = sendto(sockfd_, response.data(), response.size(), 0,
+                         (struct sockaddr*)&client_addr, sizeof(client_addr));
     
-    spdlog::debug("Отправлен ответ для IMSI {}: {}", imsi, response);
+    if (sent < 0) {
+        spdlog::error("Ошибка отправки для IMSI {}: {}", imsi, strerror(errno));
+    } else {
+        spdlog::debug("Отправлено {} байт для IMSI {}: {}", sent, imsi, response);
+    }
 }
 
 void UdpServer::run() {
@@ -121,6 +124,10 @@ void UdpServer::stop() {
     running_ = false;
     // создаем фиктивный запрос для выхода из блокировки recvfrom
     sockaddr_in dummy_addr{};
+    dummy_addr.sin_family = AF_INET;
+    dummy_addr.sin_port = htons(port());
+    inet_pton(AF_INET, "127.0.0.1", &dummy_addr.sin_addr);
+    
     sendto(sockfd_, "", 1, 0, (struct sockaddr*)&dummy_addr, sizeof(dummy_addr));
 }
 

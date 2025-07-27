@@ -1,4 +1,5 @@
 #include "SessionManager.hpp"
+#include "CDRLogger.hpp"
 
 namespace pgw {
 
@@ -79,9 +80,42 @@ unsigned SessionManager::active_sessions() const {
     return sessions_.size();
 }
 
-void SessionManager::graceful_shutdown(unsigned rate) {
-    // реализация graceful shutdown будет добавлена позже
+void SessionManager::graceful_remove(const std::string& imsi, CDRLogger& cdr_logger) {
+    std::lock_guard lock(mutex_);
+    if (sessions_.erase(imsi) > 0) {
+        spdlog::info("Session gracefully removed: {}", imsi);
+        cdr_logger.log(imsi, "graceful_remove");
+    }
+}
+
+void SessionManager::graceful_shutdown(unsigned rate, CDRLogger& cdr_logger) {
     spdlog::info("Graceful shutdown initiated, rate: {}", rate);
+    
+    while (active_sessions() > 0) {
+        std::vector<std::string> sessions_to_remove;
+        
+        // собираем сессии для удаления
+        {
+            std::lock_guard lock(mutex_);
+            unsigned count = 0;
+            for (auto it = sessions_.begin(); 
+                 it != sessions_.end() && count < rate; 
+                 ++it, ++count) 
+            {
+                sessions_to_remove.push_back(it->first);
+            }
+        }
+        
+        // удаляем сессии
+        for (const auto& imsi : sessions_to_remove) {
+            graceful_remove(imsi, cdr_logger);
+        }
+        
+        // ожидаем до следующей итерации
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    
+    spdlog::info("Все сессии удалены в рамках graceful shutdown");
 }
 
 } // namespace pgw

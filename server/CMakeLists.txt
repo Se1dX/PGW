@@ -5,6 +5,7 @@ add_library(pgw_common STATIC
   src/SessionManager.cpp
   src/CDRLogger.cpp
   src/UdpServer.cpp
+  src/HttpApi.cpp
 )
 
 target_include_directories(pgw_common PUBLIC
@@ -14,6 +15,7 @@ target_include_directories(pgw_common PUBLIC
 target_link_libraries(pgw_common PUBLIC
   nlohmann_json::nlohmann_json
   spdlog::spdlog
+  httplib::httplib
 )
 
 

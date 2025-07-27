@@ -33,7 +33,6 @@ void Logger::init(const std::string& log_file, const std::string& level) {
             
             global_logger->set_pattern("[%Y-%m-%d %H:%M:%S.%e] [%n] [%^%l%$] %v");
             
-            // Ключевое изменение: сбрасываем буфер после КАЖДОГО сообщения
             global_logger->flush_on(spdlog::level::trace);
             
             spdlog::register_logger(global_logger);
