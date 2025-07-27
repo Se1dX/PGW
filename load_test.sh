@@ -4,9 +4,9 @@
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 RUN_CLIENT="$SCRIPT_DIR/run_client.sh"
-CONCURRENCY=200  # количество параллельных запросов
-TOTAL_REQUESTS=2000  # общее количество запросов
-BLACKLIST_RATIO=20 # процент запросов из черного списка (целое число 0-100)
+CONCURRENCY=5000  # количество параллельных запросов
+TOTAL_REQUESTS=10000 # общее количество запросов
+BLACKLIST_RATIO=15 # процент запросов из черного списка (целое число 0-100)
 
 # Генератор IMSI
 generate_imsi() {
